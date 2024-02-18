@@ -1,67 +1,73 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.Optional;
+
 class Library {
     private ArrayList<LibraryItem> items;
     private Connection conn;
 
-    // Constructor
     public Library() {
         items = new ArrayList<>();
         try {
-            // Connect to the PostgresSQL database
             Class.forName("org.postgresql.Driver");
             conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0000");
-        } catch (SQLException e) {
-            System.out.println("Exception: " + e.getMessage());
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
-    // Method to add an item to the library
     public void addItem(LibraryItem item) {
         items.add(item);
-        // Add the item to the database
-        try {
-            Statement stmt = conn.createStatement();
-            if(item instanceof Book)
-                stmt.executeUpdate("INSERT INTO Book VALUES ('" + item.getTitle() + "', '" + item.getAuthor() + "', " + item.getIsbn() + ", " + item.getIsIssued() + ", '" + ((Book) item).getGenre() + "')");
-            else if(item instanceof Magazine)
-                stmt.executeUpdate("INSERT INTO Magazine VALUES ('" + item.getTitle() + "', '" + item.getAuthor() + "', " + item.getIsbn() + ", " + item.getIsIssued() + ", '" + ((Magazine) item).getPublisher() + "', " + ((Magazine) item).getIssueNumber() + ")");
-            else if(item instanceof Newspaper)
-                stmt.executeUpdate("INSERT INTO Newspaper VALUES ('" + item.getTitle() + "', '" + item.getAuthor() + "', " + item.getIsbn() + ", " + item.getIsIssued() + ", '" + ((Newspaper) item).getPublisher() + "', '" + ((Newspaper) item).getDate() + "')");
+        String sql = "";
+        if(item instanceof Book)
+            sql = "INSERT INTO Book VALUES (?, ?, ?, ?, ?)";
+        else if(item instanceof Magazine)
+            sql = "INSERT INTO Magazine VALUES (?, ?, ?, ?, ?, ?)";
+        else if(item instanceof Newspaper)
+            sql = "INSERT INTO Newspaper VALUES (?, ?, ?, ?, ?, ?)";
+        executeUpdate(sql, item);
+    }
 
+    private void executeUpdate(String sql, LibraryItem item) {
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, item.getTitle());
+            pstmt.setString(2, item.getAuthor());
+            pstmt.setInt(3, item.getIsbn());
+            pstmt.setBoolean(4, item.getIsIssued());
+            if(item instanceof Book) {
+                pstmt.setString(5, ((Book) item).getGenre());
+            } else {
+                pstmt.setString(5, ((Magazine) item).getPublisher());
+                if(item instanceof Magazine) {
+                    pstmt.setInt(6, ((Magazine) item).getIssueNumber());
+                } else {
+                    // Convert java.util.Date to java.sql.Date
+                    java.sql.Date sqlDate = new java.sql.Date(((Newspaper) item).getDate().getTime());
+                    pstmt.setDate(6, sqlDate);
+                }
+            }
+            pstmt.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    // Method to issue an item
     public void issueItem(int isbn) {
-        for (LibraryItem item : items) {
-            if (item.getIsbn() == isbn) {
-                item.issue();
-                return;
-            }
-        }
-        System.out.println("Item not found.");
+        findItem(isbn).ifPresentOrElse(LibraryItem::issue, () -> System.out.println("Item not found."));
     }
 
-    // Method to return an item
     public void returnItem(int isbn) {
-        for (LibraryItem item : items) {
-            if (item.getIsbn() == isbn) {
-                item.returnItem();
-                System.out.println(item.getTitle());
-                return;
-            }
-        }
-        System.out.println("Item not found.");
+        findItem(isbn).ifPresentOrElse(item -> {
+            item.returnItem();
+            System.out.println(item.getTitle());
+        }, () -> System.out.println("Item not found."));
     }
+
+    private Optional<LibraryItem> findItem(int isbn) {
+        return items.stream().filter(item -> item.getIsbn() == isbn).findFirst();
+    }
+
     public ArrayList<LibraryItem> getItems() {
         return items;
     }
-
 }
