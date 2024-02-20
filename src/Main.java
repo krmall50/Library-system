@@ -8,6 +8,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws ParseException {
         Library library = new Library();
+        ArrayList<Borrower> borrowers = new ArrayList<>();
 
         try (Scanner scanner = new Scanner(System.in)) {
             while (true) {
@@ -17,6 +18,8 @@ public class Main {
                 System.out.println("4. Issue an item");
                 System.out.println("5. Return an item");
                 System.out.println("6. View all items");
+                System.out.println("7. Add a borrower");
+                System.out.println("8. View all borrowers");
                 System.out.println("7. Exit");
                 System.out.print("Enter your choice: ");
                 int choice = scanner.nextInt();
@@ -99,7 +102,24 @@ public class Main {
                         }
                         break;
                     case 7:
-                        // Exit
+                        //Add a borrower
+                        System.out.print("Enter borrower name: ");
+                        String borrowerName = scanner.nextLine();
+                        System.out.print("Enter borrower address: ");
+                        String borrowerAddress = scanner.nextLine();
+                        System.out.print("Enter borrower phone number: ");
+                        int borrowerPhone = scanner.nextInt();
+                        Borrower newBorrower = new Borrower(-1, borrowerName, borrowerAddress, borrowerPhone);
+                        borrowers.add(newBorrower);
+                        break;
+                    case 8:
+                        // View all borrowers
+                        for (Borrower borrower : borrowers) {
+                            System.out.println(borrower);
+                        }
+                        break;
+                    case 9:
+                        //Exit
                         System.exit(0);
                 }
             }
