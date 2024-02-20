@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Borrower extends Person {
 
-    private ArrayList<HoldRequest> holdRequests;
+    private final ArrayList<HoldRequest> holdRequests;
 
     public Borrower(int id, String name, String address, int phoneNo) {
         super(id, name, address, phoneNo);
