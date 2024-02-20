@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Project java, library system">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/postgresql_42_3_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Library.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LibraryItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Magazine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Newspaper.java" afterDir="false" />
+    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Added improvements to the code.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +38,22 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Ernar/Downloads/postgresql-42.3.7.jar",
+    "last_opened_file_path": "C:/Users/ajsan/Desktop/Library-system-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
       </set>
     </attachedChunks>
   </component>
@@ -64,6 +65,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1707376119690</updated>
+      <workItem from="1708404589857" duration="144000" />
+      <workItem from="1708408644876" duration="974000" />
     </task>
     <task id="LOCAL-00001" summary="Project java, library system">
       <option name="closed" value="true" />
@@ -73,12 +76,24 @@
       <option name="project" value="LOCAL" />
       <updated>1707403203841</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added improvements to the code.">
+      <option name="closed" value="true" />
+      <created>1708408864120</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708408864120</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project java, library system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project java, library system" />
+    <MESSAGE value="Added improvements to the code." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added improvements to the code." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

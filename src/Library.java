@@ -5,6 +5,7 @@ import java.util.Optional;
 class Library {
     private ArrayList<LibraryItem> items;
     private Connection conn;
+
     public Library() {
         items = new ArrayList<>();
         try {
