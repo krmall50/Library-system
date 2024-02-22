@@ -1,3 +1,7 @@
+package Library;
+
+import Library.LibraryItem;
+
 import java.util.Date;
 
 class Newspaper extends LibraryItem {
@@ -19,7 +23,7 @@ class Newspaper extends LibraryItem {
 
     @Override
     public String toString() {
-        return "Newspaper [ " +
+        return "Library.Newspaper [ " +
                 "title: '" + getTitle() + '\'' +
                 ", author: '" + getAuthor() + '\'' +
                 ", isbn: " + getIsbn() +

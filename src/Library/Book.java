@@ -1,3 +1,7 @@
+package Library;
+
+import Library.LibraryItem;
+
 class Book extends LibraryItem {
     private String genre;
 
@@ -13,7 +17,7 @@ class Book extends LibraryItem {
 
     @Override
     public String toString() {
-        return "Book [ " +
+        return "Library.Book [ " +
                 "title: '" + getTitle() + '\'' +
                 ", author: '" + getAuthor() + '\'' +
                 ", isbn: " + getIsbn() +

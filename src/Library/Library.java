@@ -1,5 +1,5 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
+package Library;
+
 import java.sql.*;
 import java.util.ArrayList;
 class Library {
@@ -7,18 +7,7 @@ class Library {
     private Connection conn;
 
     // Constructor
-    public Library() {
-        items = new ArrayList<>();
-        try {
-            // Connect to the PostgresSQL database
-            Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "0000");
-        } catch (SQLException e) {
-            System.out.println("Exception: " + e.getMessage());
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
-        }
-    }
+    public Library() {}
 
     // Method to add an item to the library
     public void addItem(LibraryItem item) {

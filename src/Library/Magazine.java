@@ -1,3 +1,7 @@
+package Library;
+
+import Library.LibraryItem;
+
 class Magazine extends LibraryItem {
     private String publisher;
     private int issueNumber;
@@ -17,7 +21,7 @@ class Magazine extends LibraryItem {
 
     @Override
     public String toString() {
-        return "Magazine [ " +
+        return "Library.Magazine [ " +
                 "title: '" + getTitle() + '\'' +
                 ", author: '" + getAuthor() + '\'' +
                 ", isbn: " + getIsbn() +

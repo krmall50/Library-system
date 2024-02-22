@@ -1,3 +1,5 @@
+package Library;
+
 abstract class LibraryItem {
     private String title;
     private String author;
@@ -38,7 +40,7 @@ abstract class LibraryItem {
 
     @Override
     public String toString() {
-        return "LibraryItem [ " +
+        return "Library.LibraryItem [ " +
                 "title: '" + title + '\'' +
                 ", author: '" + author + '\'' +
                 ", isbn: " + isbn +
