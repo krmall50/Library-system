@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Project java, library system">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/postgresql_42_3_7.xml" beforeDir="false" />
+    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Project java, library system, User added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LibraryV2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LibraryV2.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/LibraryItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Magazine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Magazine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Newspaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Newspaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,19 +32,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Ernar/Desktop/Zip-files/postgresql-42.7.1.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Ernar/Desktop/Zip-files/postgresql-42.7.1.jar",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="Database" />
@@ -89,12 +83,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707403521848</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Project java, library system, User added">
+      <option name="closed" value="true" />
+      <created>1708600384470</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708600384470</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Project java, library system" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project java, library system" />
+    <MESSAGE value="Project java, library system, User added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Project java, library system, User added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
