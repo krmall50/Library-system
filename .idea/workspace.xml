@@ -4,9 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Actions Package, new classes, interface IOOPeration">
+    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="more action classes added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Library.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/LibraryItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Magazine.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Newspaper.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Users/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Users/NormalUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Users/NormalUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Library/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Users/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708760274825</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="more action classes added">
+      <option name="closed" value="true" />
+      <created>1708761008164</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708761008164</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,7 +168,8 @@
     <MESSAGE value="Project java, library system, User added, admin added" />
     <MESSAGE value="Added menu, changes in Main" />
     <MESSAGE value="Actions Package, new classes, interface IOOPeration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actions Package, new classes, interface IOOPeration" />
+    <MESSAGE value="more action classes added" />
+    <option name="LAST_COMMIT_MESSAGE" value="more action classes added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -1,13 +1,10 @@
 package Library;
 
 import Library.Database.Database;
-import Library.Library;
 import Library.Users.Admin;
 import Library.Users.NormalUser;
 import Library.Users.User;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Main {
@@ -42,7 +39,7 @@ public class Main {
         int n = database.login(number, email);
         if (n != -1) {
             User user = database.getUser(n);
-            user.menu();
+            user.menu(database, user);
         } else {
             System.out.println("User doesn't exist");
         }
@@ -64,7 +61,7 @@ public class Main {
             user = new NormalUser(name, email, number);
         }
         database.addUser(user);
-        user.menu();
+        user.menu(database, user);
 
     }
 }

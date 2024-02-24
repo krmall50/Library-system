@@ -1,5 +1,6 @@
 package Library.Users;
 
+import Library.Database.Database;
 import Library.Interfaces.IOOperation;
 
 public abstract class User {
@@ -40,6 +41,6 @@ public abstract class User {
     public void setNumber(String number) {
         this.number = number;
     }
-    abstract public void menu();
+    abstract public void menu(Database database, User user);
 
 }
