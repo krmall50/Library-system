@@ -3,8 +3,6 @@ package Library.Actions;
 import Library.Database.Database;
 import Library.Interfaces.IOOperation;
 import Library.Users.User;
-
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class DeleteAllData implements IOOperation {
