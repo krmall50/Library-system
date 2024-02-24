@@ -8,7 +8,7 @@ import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class DeleteAllData implements IOOperation {
-    @Override
+
     public void oper(Database database, User user) {
 
         System.out.println("Are you sure that you want to delete all data?" +
@@ -20,7 +20,6 @@ public class DeleteAllData implements IOOperation {
         } else {
             user.menu(database,user);
         }
-
 
     }
 }
