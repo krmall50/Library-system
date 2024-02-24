@@ -30,14 +30,17 @@ public class Database {
         users.add(s);
         usernames.add(s.getName());
     }
-    public boolean login(String number, String email){
-        boolean n = false;
+    public int login(String number, String email){
+        int n = -1;
         for(User s : users){
             if(s.getNumber().matches(number) && s.getEmail().matches(email)){
-                n = true;
+                n = users.indexOf(s);
                 break;
             }
         }
         return n;
+    }
+    public User getUser(int n){
+        return users.get(n);
     }
 }
