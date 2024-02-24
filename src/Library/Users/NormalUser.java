@@ -1,9 +1,20 @@
 package Library.Users;
 
+import Library.Actions.PlaceOrder;
+import Library.Actions.Search;
+import Library.Actions.ViewBooks;
+import Library.Interfaces.IOOperation;
+
 public class NormalUser extends User{
 
     public NormalUser(String name) {
         super(name);
+        this.operations = new IOOperation[]{
+                new ViewBooks(),
+                new Search(),
+                new PlaceOrder(),
+
+        };
     }
     public NormalUser(String name, String email, String number){
         super(name, email, number);

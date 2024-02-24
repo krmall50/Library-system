@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Added menu, changes in Main">
+    <list default="true" id="e01f3844-01d1-4a83-b088-ee474c6f675e" name="Changes" comment="Actions Package, new classes, interface IOOPeration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/Actions/ViewOrders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Actions/ViewOrders.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Library/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Users/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Library/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Library/Users/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +124,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708758908189</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Actions Package, new classes, interface IOOPeration">
+      <option name="closed" value="true" />
+      <created>1708760274825</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708760274825</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,7 +151,8 @@
     <MESSAGE value="Project java, library system, User added" />
     <MESSAGE value="Project java, library system, User added, admin added" />
     <MESSAGE value="Added menu, changes in Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added menu, changes in Main" />
+    <MESSAGE value="Actions Package, new classes, interface IOOPeration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actions Package, new classes, interface IOOPeration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
