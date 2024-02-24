@@ -1,38 +1,51 @@
 package Library;
 
 import Library.Database.Database;
-import Library.Library;
 import Library.Users.Admin;
 import Library.Users.NormalUser;
 import Library.Users.User;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class Main {
     static Scanner s;
-    public static void main(String[] args) {
-        Database database = new Database();
-        System.out.println("Library system \n1.Login\n2.New User");
-        s = new Scanner(System.in);
-        int n = s.nextInt();
+    static Database database;
 
-        switch (n) {
-            case 1: login();
-            case 2: newUser();
-            default:
-                System.out.println("404");
-        }
+
+    public static void main(String[] args) {
+        database = new Database();
+        System.out.println("Library system!");
+        int num;
+        do {
+            System.out.println("0.Exit \n1.Login\n2.New User");
+            s = new Scanner(System.in);
+            num = s.nextInt();
+
+            switch (num) {
+                case 1:
+                    login();
+                case 2:
+                    newUser();
+            }
+        } while (num!=0);
 
     }
-    private static void login(){
+
+    private static void login() {
         System.out.println("enter number: ");
         String number = s.next();
         System.out.println("enter email: ");
         String email = s.next();
+        int n = database.login(number, email);
+        if (n != -1) {
+            User user = database.getUser(n);
+            user.menu(database, user);
+        } else {
+            System.out.println("User doesn't exist");
+        }
     }
-    private static void newUser(){
+
+    private static void newUser() {
         System.out.println("enter name: ");
         String name = s.next();
         System.out.println("enter number: ");
@@ -41,12 +54,14 @@ public class Main {
         String email = s.next();
         System.out.println("1.Admin\n2.Normal User");
         int n2 = s.nextInt();
-        if(n2 == 1){
-            User admin = new Admin(name, email, number);
-        }else {
-            User user = new User(name, email, number);
-
+        User user;
+        if (n2 == 1) {
+            user = new Admin(name, email, number);
+        } else {
+            user = new NormalUser(name, email, number);
         }
+        database.addUser(user);
+        user.menu(database, user);
 
     }
 }
