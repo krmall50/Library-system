@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Borrower extends Person {
 
@@ -7,9 +8,8 @@ public class Borrower extends Person {
     public Borrower(int id, String name, String address, int phoneNo) {
         super(id, name, address, phoneNo);
         this.holdRequests = new ArrayList<>();
-    }
 
-    public void addHoldRequest(HoldRequest request) {
+    }  public void placeHoldRequest(HoldRequest request) {
         holdRequests.add(request);
     }
 
@@ -17,10 +17,9 @@ public class Borrower extends Person {
         holdRequests.remove(request);
     }
 
-    public ArrayList<HoldRequest> getHoldRequests() {
+    public List<HoldRequest> getHoldRequests() {
         return holdRequests;
     }
-
     @Override
     public String toString() {
         return "Borrower [id=" + id + ", name=" + name + ", address=" + address
