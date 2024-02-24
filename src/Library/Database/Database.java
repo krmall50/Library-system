@@ -1,7 +1,10 @@
 package Library.Database;
 
+import Library.Borrowing;
 import Library.Users.User;
 
+import java.awt.print.Book;
+import java.io.PrintWriter;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -26,6 +29,11 @@ public class Database {
     }
     ArrayList<User> users = new ArrayList<User>();
     ArrayList<String> usernames = new ArrayList<String>();
+    ArrayList<Book> books = new ArrayList<Book>();
+    ArrayList<String> bookname = new ArrayList<String>();
+    ArrayList<Borrowing> borrowings = new ArrayList<Borrowing>();
+
+
     public void addUser(User s){
         users.add(s);
         usernames.add(s.getName());
@@ -42,5 +50,35 @@ public class Database {
     }
     public User getUser(int n){
         return users.get(n);
+    }
+
+    public void AddBook(Book book) {
+        books.add(book);
+        bookname.add(book.getName());
+        saveBooks();
+    }
+
+    public int getBook(String bookname) {
+    }
+
+    private void saveBooks() {
+    }
+
+
+    public void deleteBook(int i){
+        books.remove(i);
+        bookname.remove(i);
+        saveBooks();
+    }
+
+    public void deleteAllData() {
+    }
+    public void BorrowBook(Borrowing brw,Book book,int bookindex){
+        borrowings.add(brw);
+        books.set(bookindex,book);
+        saveBorrowing();
+        saveBooks();
+    }
+    private void saveBorrowing() {
     }
 }
