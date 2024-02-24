@@ -9,12 +9,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Database {
-    ArrayList<User> users = new ArrayList<User>();
-    ArrayList<String> usernames = new ArrayList<String>();
-    public void addUser(User s){
-
-    }
-
     private Connection conn;
     public Connection ConnectToDB() {
         try {
@@ -27,11 +21,23 @@ public class Database {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+        if (conn != null){System.out.println("Good");}
         return conn;
     }
-
-
-
-
-
+    ArrayList<User> users = new ArrayList<User>();
+    ArrayList<String> usernames = new ArrayList<String>();
+    public void addUser(User s){
+        users.add(s);
+        usernames.add(s.getName());
+    }
+    public boolean login(String number, String email){
+        boolean n = false;
+        for(User s : users){
+            if(s.getNumber().matches(number) && s.getEmail().matches(email)){
+                n = true;
+                break;
+            }
+        }
+        return n;
+    }
 }

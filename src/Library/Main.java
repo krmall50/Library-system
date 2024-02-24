@@ -1,5 +1,6 @@
 package Library;
 
+import Library.Database.Database;
 import Library.Library;
 import Library.Users.Admin;
 import Library.Users.NormalUser;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 public class Main {
     static Scanner s;
     public static void main(String[] args) {
+        Database database = new Database();
         System.out.println("Library system \n1.Login\n2.New User");
         s = new Scanner(System.in);
         int n = s.nextInt();
