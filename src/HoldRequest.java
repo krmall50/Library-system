@@ -1,10 +1,12 @@
+import Library.LibraryItem;
+
 import java.util.Date;
 
 public class HoldRequest {
 
-    private Borrower borrower;
-    private LibraryItem item;
-    private Date requestDate;
+    private final Borrower borrower;
+    private final LibraryItem item;
+    private final Date requestDate;
     private Date fulfilledDate;
 
     public HoldRequest(Borrower borrower, LibraryItem item) {
