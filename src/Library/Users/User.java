@@ -1,9 +1,12 @@
 package Library.Users;
 
+import Library.Interfaces.IOOperation;
+
 public abstract class User {
     protected String name;
     protected String email;
     protected String number;
+    protected IOOperation[] operations;
 
     public User(String name){
         setName(name);
